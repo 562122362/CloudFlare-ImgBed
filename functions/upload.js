@@ -139,6 +139,10 @@ export async function onRequestPost(context) {  // Contents of context object
 			},
             body: newFormdata,
         });
+        // 6387805175:AAGJfhQO4283EobQJKamXYTh23EPlAYGrh8
+        // https://cloudflare-imgbed-axz.pages.dev/file/AgACAgUAAyEGAASNiGS8AAMDZuPk6V3tby6FW87Rts851-hKGOUAAobGMRvluiBX0LGxqL_NBUwBAAMCAAN4AAM2BA.png
+
+
         const clonedRes = await response.clone().json(); // 等待响应克隆和解析完成
         const fileInfo = getFile(clonedRes);
         const filePath = await getFilePath(env, fileInfo.file_id);
